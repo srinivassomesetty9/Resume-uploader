@@ -7,36 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="snackbar">Dummy message</div>
-    <div class="card">
-        <h1 class="app-title">Resume Validator</h1>
+    <div class="container">
+        <h1 class="title">Resume Validator</h1>
         <div class="upload-section">
             <input type="file" id="resumeUpload" class="file-label" accept=".pdf,.doc,.docx" multiple>
-            <div id="fileList" class="file-details"></div>
-            <button class="file-label" onclick="uploadResumes()">Upload Resumes</button>
+            <button class="upload-button" onclick="uploadResumes()">Upload Resumes</button>
+            <div id="fileList" class="file-details"></div> 
+            
         </div>
         <div class="resumes-section">
-            <h2 class="app-subtitle">Resumes</h2>
-            <table id="resumesTable" class="file-details">
+            <h2>Resumes</h2>
+            <table id="resumesTable">
                 <tr>
                     <th>Select</th>
                     <th>Resume</th>
                 </tr>
             </table>
-            <button class="file-label" onclick="validateResumes()">Validate Resumes</button>
+            <button class="validate-button" onclick="validateResumes()">Validate Selected Resumes</button>
         </div>
         <div class="validated-section">
-            <h2 class="app-subtitle">Validated Resumes</h2>
-            <table id="validatedTable" class="file-details">
+            <h2>Validated Resumes</h2>
+            <table id="validatedTable">
                 <tr>
                     <th>Select</th>
                     <th>Resume</th>
                 </tr>
             </table>
-            <button class="file-label" onclick="communicate()">Communicate with Selected Resumes</button>
+            <button class="communicate-button" onclick="communicate()">Communicate with Selected Resumes</button>
         </div>
     </div>
-    
+    <div id="snackbar" class="snackbar"></div>
     <script src="scripts.js"></script>
 </body>
 </html>

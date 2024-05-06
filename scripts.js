@@ -1,6 +1,8 @@
 function uploadResumes() {
     const files = document.getElementById('resumeUpload').files;
+    // const resetFileInput = document.getElementById('resumeUpload').value ='';
     if (files.length === 0) {
+        showSnackbar("Please select at least one resume.");
         return; // Don't proceed if no files are selected
     }
     const resumeUpload = document.getElementById('resumeUpload');
@@ -15,7 +17,11 @@ function uploadResumes() {
         cell2.innerText = resumeUpload.files[i].name;
     }
 // Dummy code to show snackbar message
-showSnackbar("Resumes uploaded successfully.");
+setTimeout(() => {
+    showSnackbar("Resumes uploaded successfully.");
+    // displayFiles(files, "resumesTable");
+    // resetFileInput();
+}, 10); // Simulate 2 seconds of upload time
     // Dummy API call for uploading resumes
     // This could be an AJAX request to your backend
     console.log('Resumes uploaded:', resumeUpload.files);
@@ -27,6 +33,7 @@ function validateResumes() {
     const selectedResumes = [];
     const selectedRows = document.querySelectorAll("#resumesTable input[type='checkbox']:checked");
     if (selectedRows.length === 0) {
+        showSnackbar("Please select at least one resume to validate.");
         return; // Don't proceed if no resumes are selected
     }
     // Find selected resumes
@@ -41,7 +48,11 @@ function validateResumes() {
     selectedResumes.forEach(row => {
         validatedTable.appendChild(row);
     });
-    showSnackbar("Resumes validated successfully.");
+
+    setTimeout(() => {
+        showSnackbar("Resumes validated successfully.");
+        // moveSelectedRows(selectedRows, "resumesTable", "validatedTable");
+    }, 10);
     // Dummy API call for validating resumes
     // This could be an AJAX request to your backend
     console.log('Resumes validated:', selectedResumes);
@@ -52,6 +63,7 @@ function communicate() {
     const selectedResumes = [];
     const selectedRows = document.querySelectorAll("#validatedTable input[type='checkbox']:checked");
     if (selectedRows.length === 0) {
+        showSnackbar("Please select at least one validated resume to communicate with.");
         return; // Don't proceed if no resumes are selected
     }
     // Find selected resumes
@@ -66,7 +78,10 @@ function communicate() {
     selectedResumes.forEach(row => {
         row.remove();
     });
-    showSnackbar("Communication with resumes successful.");
+    setTimeout(() => {
+        showSnackbar("Communication with resumes successful.");
+        removeSelectedRows(selectedRows, "validatedTable");
+    }, 10);
     // Dummy API call for communication
     // This could be an AJAX request to your backend
     console.log('Communication with resumes successful:', selectedResumes);
@@ -75,6 +90,6 @@ function communicate() {
 function showSnackbar(message) {
     var snackbar = document.getElementById("snackbar");
     snackbar.textContent = message;
-    snackbar.className = "show";
+    snackbar.className = "snackbar show";
     setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
 }
