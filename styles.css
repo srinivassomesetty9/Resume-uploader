@@ -1,0 +1,217 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #16184d, #2374bb);
+    height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #dfe4ee;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.app-title {
+    color: #070707;
+}
+
+.app-subtitle {
+    color: #333;
+}
+
+.file-label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #300a6e;
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.file-label:hover {
+    background-color: #49b2f8;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.preview-container img {
+    max-width: 100%;
+    max-height: 150px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+
+.card {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #dfe4ee;
+    border-radius: 10px;
+    width: 45%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.validated-card {
+    background-color: #f5f5f5;
+}
+
+.app-title {
+    color: #070707;
+}
+
+.app-subtitle {
+    color: #333;
+}
+
+.file-label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #300a6e;
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.file-label:hover {
+    background-color: #49b2f8;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+/* styles.css */
+
+/* CSS for tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* CSS for Validated Resumes section list */
+.validated-section {
+    margin-top: 30px;
+}
+
+.validated-section .file-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.validated-section .file-details .file-item {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.validated-section .file-details .file-item img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 10px;
+}
+
+.validated-section .file-details .file-name {
+    font-size: 14px;
+    color: #333;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #16b472;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
